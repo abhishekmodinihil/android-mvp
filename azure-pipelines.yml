@@ -38,8 +38,8 @@ steps:
     #symbolsDsymFiles: # Optional
     #symbolsMappingTxtFile: # Optional
     #symbolsIncludeParentDirectory: # Optional
-    #releaseNotesOption: 'input' # Options: input, file
-    #releaseNotesInput: # Required when releaseNotesOption == Input
+    releaseNotesOption: 'input' # Options: input, file
+    releaseNotesInput: 'sample notes'
     #releaseNotesFile: # Required when releaseNotesOption == File
     #isMandatory: false # Optional
     distributionGroupId: '9e79a4e6-da6a-4b16-b75d-367fb2b2a169'
