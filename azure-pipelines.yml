@@ -29,7 +29,7 @@ steps:
 
 - task: AppCenterDistribute@1
   inputs:
-    serverEndpoint: 
+    serverEndpoint: 'AzureAndroid'
     appSlug: 'abhishek.modi/AzureDemo'
     appFile: '$(build.artifactStagingDirectory)/**/*.apk'
     #symbolsOption: 'Apple' # Optional. Options: apple
@@ -42,4 +42,4 @@ steps:
     #releaseNotesInput: # Required when releaseNotesOption == Input
     #releaseNotesFile: # Required when releaseNotesOption == File
     #isMandatory: false # Optional
-    #distributionGroupId: # Optional
+    distributionGroupId: '9e79a4e6-da6a-4b16-b75d-367fb2b2a169'
