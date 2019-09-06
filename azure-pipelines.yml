@@ -26,3 +26,20 @@ steps:
     targetFolder: '$(build.artifactStagingDirectory)'
     
 - task: PublishBuildArtifacts@1
+
+- task: AppCenterDistribute@1
+  inputs:
+    serverEndpoint: 
+    appSlug: 'abhishek.modi/AzureDemo'
+    appFile: '$(build.artifactStagingDirectory)/**/*.apk'
+    #symbolsOption: 'Apple' # Optional. Options: apple
+    #symbolsPath: # Optional
+    #symbolsPdbFiles: '**/*.pdb' # Optional
+    #symbolsDsymFiles: # Optional
+    #symbolsMappingTxtFile: # Optional
+    #symbolsIncludeParentDirectory: # Optional
+    #releaseNotesOption: 'input' # Options: input, file
+    #releaseNotesInput: # Required when releaseNotesOption == Input
+    #releaseNotesFile: # Required when releaseNotesOption == File
+    #isMandatory: false # Optional
+    #distributionGroupId: # Optional
