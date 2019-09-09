@@ -91,7 +91,7 @@ steps:
     distributionGroupId: '9e79a4e6-da6a-4b16-b75d-367fb2b2a169'
   condition: and(succeeded(), eq(variables['Build.SourceBranch'], 'refs/heads/master'))
 
-  task: AppCenterDistribute@1
+- task: AppCenterDistribute@1
   inputs:
     serverEndpoint: 'AzureAndroid'
     appSlug: 'abhishek.modi/AzureDemo'
