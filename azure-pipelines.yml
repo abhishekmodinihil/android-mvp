@@ -12,7 +12,7 @@ pool:
 
 steps:
 - task: Gradle@2
-  displayName: Running test case
+  displayName: Test case Executing
   inputs:
     workingDirectory: ''
     gradleWrapperFile: 'gradlew'
@@ -23,6 +23,7 @@ steps:
   
 
 - task: Gradle@2
+  displayName: Creating the Build
   inputs:
     workingDirectory: ''
     gradleWrapperFile: 'gradlew'
@@ -45,6 +46,7 @@ steps:
 
 
 - task: CopyFiles@2
+  displayName: Copy Debug APK
   inputs:
     contents: '**/*.apk'
     targetFolder: '$(build.artifactStagingDirectory)'
@@ -63,6 +65,7 @@ steps:
   condition: and(succeeded(), eq(variables['Build.SourceBranch'], 'refs/heads/develop'))
 
 - task: AppCenterDistribute@1
+  displayName: Publish into Master
   inputs:
     serverEndpoint: 'AzureAndroid'
     appSlug: 'abhishek.modi/AzureDemo'
@@ -81,6 +84,7 @@ steps:
   condition: and(succeeded(), eq(variables['Build.SourceBranch'], 'refs/heads/master'))
 
 - task: AppCenterDistribute@1
+  displayName: Publish into Develop
   inputs:
     serverEndpoint: 'AzureAndroid'
     appSlug: 'abhishek.modi/AzureDemo'
