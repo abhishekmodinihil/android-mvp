@@ -34,7 +34,7 @@ import dagger.android.AndroidInjection;
 
 public class MainActivity extends AppCompatActivity implements MainMVPView, ReposRecyclerViewAdapter.ClickListener {
 
-    //@BindView(R.id.toolbar) Toolbar toolbar;
+    @BindView(R.id.toolbar) Toolbar toolbar;
     @BindView(R.id.rv_repos) RecyclerView rvRepos;
     @BindView(R.id.tv_msg) TextView tvMsg;
     @BindView(R.id.pb_loading) ProgressBar pbLoading;
