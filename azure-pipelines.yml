@@ -51,10 +51,10 @@ steps:
     
 
 - task: PublishBuildArtifacts@1
-  inputs :
-      pathToPublish : ' $ (build.artifactStagingDirectory) '
-      artifactName : ' outputs '
-      artifactType : 'container'
+  #inputs :
+    #  pathToPublish : ' $ (build.artifactStagingDirectory) '
+   #   artifactName : ' outputs '
+  #    artifactType : 'container'
   condition: and(succeeded(), eq(variables['Build.SourceBranch'], 'refs/heads/master'))
 
 
