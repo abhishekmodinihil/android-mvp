@@ -12,9 +12,9 @@ pool:
 
 steps:
 - task: Gradle@2
+  displayName: Running test case
   inputs:
     workingDirectory: ''
-    displayName: "Running test case"
     gradleWrapperFile: 'gradlew'
     gradleOptions: '-Xmx3072m'
     publishJUnitResults: false
